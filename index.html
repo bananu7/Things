@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCivAAH8TcoWYDeC_BjigY-uQiojOFtC6U",
+        authDomain: "things-998d0.firebaseapp.com",
+        databaseURL: "https://things-998d0.firebaseio.com",
+        projectId: "things-998d0",
+        storageBucket: "things-998d0.appspot.com",
+        messagingSenderId: "863154205722"
+      };
+      firebase.initializeApp(config);
+      firebaseRef = firebase.database().ref();
+    </script>
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <input type="text" id="newThingName">
+      <input type="button" id="newThingAdd">
+    </header>
+    <div id="container"></div>
+  </body>
+</html>
