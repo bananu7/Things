@@ -2,7 +2,7 @@ $(document).ready(function(){
     console.log('init');
 
     firebase.auth().onAuthStateChanged(function(user) {
-        if (user) {        
+        if (user) {
             console.log('signed in as ' + user.uid);
 
             firebase.database().ref('things').on("child_added", function(data) {
